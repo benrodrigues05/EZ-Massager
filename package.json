@@ -2,9 +2,15 @@
   "name": "ez-massager-site",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pages": "node site/build-pages.mjs",
+    "dev": "npm run pages && vite",
+    "build": "npm run pages && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "fetch-assets": "node scripts/fetch-assets.mjs",
+    "screenshots": "node scripts/screenshots.mjs",
+    "og": "node scripts/og-image.mjs"
   },
   "repository": {
     "type": "git",
@@ -25,8 +31,12 @@
     "three": "^0.186.0"
   },
   "devDependencies": {
+    "@types/node": "^26.6.2",
     "@types/three": "^0.186.0",
+    "lucide-static": "^1.47.0",
+    "playwright": "^1.63.0",
     "sharp": "^0.35.4",
+    "simple-icons": "^16.31.0",
     "typescript": "^7.0.2",
     "vite": "^8.3.0"
   }

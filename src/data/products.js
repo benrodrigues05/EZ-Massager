@@ -37,7 +37,7 @@ export const brand = {
  * @property {number} price           ZAR
  * @property {string} sku
  * @property {string} size
- * @property {{name:string, hex:string, deep:string, tint:string, ink:string, glow:string}} colour
+ * @property {{name:string, hex:string, deep:string, tint:string, ink:string, glow:string, button:string, onButton:string}} colour
  * @property {string} image
  * @property {string} imagePng
  * @property {string[]} gallery
@@ -67,7 +67,7 @@ export const products = [
     price: 160,
     sku: 'EZ 2%',
     size: '100ml',
-    colour: { name: 'Sun Yellow', hex: '#F2C400', deep: '#B08C00', tint: '#FFF3B0', ink: '#1C1600', glow: '#FFD84D' },
+    colour: { name: 'Sun Yellow', hex: '#F2C400', deep: '#B08C00', tint: '#FFF1A8', ink: '#1C1600', glow: '#FFD84D', button: '#F2C400', onButton: '#1C1600' },
     image: '/images/products/original-2-menthol.webp',
     imagePng: '/images/products/original-2-menthol.png',
     gallery: ['/images/products/original-2-menthol-alt-1.webp', '/images/products/original-2-menthol-alt-2.webp'],
@@ -93,7 +93,7 @@ export const products = [
     price: 165,
     sku: 'EZ 4%',
     size: '100ml',
-    colour: { name: 'Ember Red', hex: '#E2141F', deep: '#9E0D14', tint: '#FFD9DB', ink: '#1F0405', glow: '#FF4A52' },
+    colour: { name: 'Ember Red', hex: '#E2141F', deep: '#9E0D14', tint: '#FFDCDE', ink: '#1F0405', glow: '#FF4A52', button: '#D8121C', onButton: '#FFFFFF' },
     image: '/images/products/extra-strength-4-menthol.webp',
     imagePng: '/images/products/extra-strength-4-menthol.png',
     gallery: ['/images/products/extra-strength-4-menthol-alt-1.webp', '/images/products/extra-strength-4-menthol-alt-2.webp'],
@@ -120,10 +120,10 @@ export const products = [
     price: 195,
     sku: 'EZ C',
     size: '100ml',
-    colour: { name: 'Leaf Green', hex: '#4FA34A', deep: '#2E6F2B', tint: '#DDF2D9', ink: '#0B1A0A', glow: '#7ED276' },
+    colour: { name: 'Leaf Green', hex: '#4FA34A', deep: '#2E6F2B', tint: '#DCEFD6', ink: '#0B1A0A', glow: '#7ED276', button: '#2F7A2C', onButton: '#FFFFFF' },
     image: '/images/products/arnica-natural-organic-plant-oil.webp',
     imagePng: '/images/products/arnica-natural-organic-plant-oil.png',
-    gallery: ['/images/site/plant-oil-lifestyle.webp', '/images/site/plant-oil-square.webp'],
+    gallery: ['/images/site/plant-oil-lifestyle.webp', '/images/products/pack-3x-arnica-natural-organic-plant-oil.webp'],
     model: '/models/arnica-natural-organic-plant-oil.glb',
     handle: 'arnica-natural-organic-plant',
     variantId: 32258458222674,
@@ -309,7 +309,7 @@ export const ingredients = [
     name: 'Natural Organic Plant Oil',
     role: 'Anti-inflammatory',
     body: 'Acts as a powerful anti-inflammatory, easing inflammation and reducing muscle spasms. Found in the Arnica + Natural Organic Plant Oil variant.',
-    image: '/images/site/plant-oil-square.webp',
+    image: '/images/site/plant-oil-lifestyle.webp',
   },
 ];
 
