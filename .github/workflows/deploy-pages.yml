@@ -1,11 +1,11 @@
 name: Deploy to GitHub Pages
 
-# Builds the site and publishes it to GitHub Pages. Enable Pages for the
-# repository (Settings > Pages > Source: GitHub Actions) and it will deploy on
-# every push to the branch below. For a custom domain, set SITE_BASE to "/".
+# Every push builds the site as a check. Pushes to main (or a manual run) also
+# publish it to GitHub Pages once Pages is enabled for the repository
+# (Settings > Pages > Source: GitHub Actions). For a custom domain, set
+# SITE_BASE to "/".
 on:
   push:
-    branches: [main, claude/ez-massager-redesign-ppgdmn]
   workflow_dispatch:
 
 permissions:
@@ -36,6 +36,7 @@ jobs:
           path: dist
   deploy:
     needs: build
+    if: github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
